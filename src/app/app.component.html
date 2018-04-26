@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+    <tag-input placeholder="Enter User" 
+      secondaryPlaceholder="Enter User" class="input-tags" 
+      [ngModel]=""
+      [ngModelOptions]="{standalone: true}" 
+      theme='dark'                            
+      [onlyFromAutocomplete]="true" 
+      [errorMessages]="errorMessages"
+      [validators]="validators"
+    >
+      <tag-input-dropdown class="chips-dropdown" 
+        [autocompleteObservable]="userObservableSource" 
+        [displayBy]="'value'" 
+        [identifyBy]="'id'" 
+        >
+        <ng-template let-item="item" let-index="index">
+          {{ item.value }}
+        </ng-template>
+      </tag-input-dropdown>
+    </tag-input>
+                          
